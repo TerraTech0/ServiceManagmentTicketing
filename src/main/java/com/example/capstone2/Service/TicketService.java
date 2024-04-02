@@ -66,7 +66,7 @@ public class TicketService {
     public void deleteTicket(Integer id){
         Ticket ticket = ticketRepository.findTicketByTicket_id(id);
         if (ticket == null){
-            throw new ApiException("complaint not found!");
+            throw new ApiException("Ticket not found!");
         }
         ticketRepository.delete(ticket);
     }

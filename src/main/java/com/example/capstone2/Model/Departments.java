@@ -16,7 +16,7 @@ public class Departments {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer department_id;
     @NotEmpty(message = "department name can't be empty!")
-    @Column(columnDefinition = "varchar(20) not null")
+    @Column(columnDefinition = "varchar(20) not null unique")
     private String name;
     @NotEmpty(message = "description can't be null!")
     @Column(columnDefinition = "text not null")

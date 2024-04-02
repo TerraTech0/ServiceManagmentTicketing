@@ -1,6 +1,7 @@
 package com.example.capstone2.Service;
 
 import com.example.capstone2.Api.ApiException;
+import com.example.capstone2.Advice.ControllerAdvice;
 import com.example.capstone2.Model.*;
 import com.example.capstone2.Repository.CategoryRepository;
 import com.example.capstone2.Repository.CommentRepository;
@@ -9,10 +10,7 @@ import com.example.capstone2.Repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,6 +23,7 @@ public class UserService {
     private final TicketRepository ticketRepository;
     private final CategoryRepository categoryRepository;
     private final CommentRepository commentRepository;
+    private final ControllerAdvice controllerAdvice;
 
     public List<User> getAllUsers() {
         return userRepository.findAll();

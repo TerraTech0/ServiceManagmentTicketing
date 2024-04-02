@@ -36,8 +36,8 @@ public class Ticket {
     private String description;
 
     @NotEmpty(message = "status can't be null!")
-    @Pattern(regexp = "^(Pending|Open|Assigned|In Progress|Closed|Escalated|Deescalated|Reopened|Accepted|Rejected)$")
-    @Column(columnDefinition = "varchar(15) not null CHECK (status IN ('Pending','Open', 'Assigned', 'In ', 'Closed', 'Escalated', 'Deescalated', 'Reopened', 'Accepted', 'Rejected'))")
+    @Pattern(regexp = "^(Pending|Open|On Hold|Assigned|In Progress|Closed|Escalated|Deescalated|Reopened|Accepted|Rejected)$")
+    @Column(columnDefinition = "varchar(15) not null CHECK (status IN ('Pending','Open', 'On Hold', 'Assigned', 'In Progress', 'Closed', 'Escalated', 'Deescalated', 'Reopened', 'Accepted', 'Rejected'))")
 
     private String status;
 
